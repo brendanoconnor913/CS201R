@@ -1,0 +1,6 @@
+﻿  Dealer.cpp
+c:\users\brendan\documents\visual studio 2015\projects\assignment1-cardealer\assignment1-cardealer\dealer.cpp(65): warning C4305: 'return': truncation from 'double' to 'float'
+c:\users\brendan\documents\visual studio 2015\projects\assignment1-cardealer\assignment1-cardealer\dealer.cpp(69): warning C4305: 'return': truncation from 'double' to 'float'
+c:\users\brendan\documents\visual studio 2015\projects\assignment1-cardealer\assignment1-cardealer\dealer.cpp(73): warning C4305: 'return': truncation from 'double' to 'float'
+  Assignment1-CarDealer.vcxproj -> C:\Users\Brendan\Documents\Visual Studio 2015\Projects\Assignment1-CarDealer\Debug\Assignment1-CarDealer.exe
+  Assignment1-CarDealer.vcxproj -> C:\Users\Brendan\Documents\Visual Studio 2015\Projects\Assignment1-CarDealer\Debug\Assignment1-CarDealer.pdb (Partial PDB)

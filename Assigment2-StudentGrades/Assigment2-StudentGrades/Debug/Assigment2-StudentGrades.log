@@ -1,0 +1,9 @@
+﻿  main.cpp
+c:\users\brendan\documents\visual studio 2015\projects\assigment2-studentgrades\assigment2-studentgrades\main.cpp(22): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\brendan\documents\visual studio 2015\projects\assigment2-studentgrades\assigment2-studentgrades\main.cpp(22): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\brendan\documents\visual studio 2015\projects\assigment2-studentgrades\assigment2-studentgrades\main.cpp(23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\brendan\documents\visual studio 2015\projects\assigment2-studentgrades\assigment2-studentgrades\main.cpp(24): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\brendan\documents\visual studio 2015\projects\assigment2-studentgrades\assigment2-studentgrades\main.cpp(25): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\brendan\documents\visual studio 2015\projects\assigment2-studentgrades\assigment2-studentgrades\main.cpp(25): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Assigment2-StudentGrades.vcxproj -> C:\Users\Brendan\Documents\Visual Studio 2015\Projects\Assigment2-StudentGrades\Debug\Assigment2-StudentGrades.exe
+  Assigment2-StudentGrades.vcxproj -> C:\Users\Brendan\Documents\Visual Studio 2015\Projects\Assigment2-StudentGrades\Debug\Assigment2-StudentGrades.pdb (Partial PDB)
