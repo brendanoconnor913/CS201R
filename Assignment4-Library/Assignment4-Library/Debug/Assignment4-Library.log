@@ -1,0 +1,8 @@
+﻿  User.cpp
+c:\users\brendan\documents\visual studio 2015\projects\assignment4-library\assignment4-library\user.cpp(27): warning C4018: '<': signed/unsigned mismatch
+c:\users\brendan\documents\visual studio 2015\projects\assignment4-library\assignment4-library\user.cpp(68): warning C4018: '<': signed/unsigned mismatch
+c:\users\brendan\documents\visual studio 2015\projects\assignment4-library\assignment4-library\user.cpp(129): warning C4018: '<': signed/unsigned mismatch
+c:\users\brendan\documents\visual studio 2015\projects\assignment4-library\assignment4-library\user.cpp(172): warning C4018: '<': signed/unsigned mismatch
+c:\users\brendan\documents\visual studio 2015\projects\assignment4-library\assignment4-library\user.cpp(58): warning C4715: 'User::CheckOut': not all control paths return a value
+  Assignment4-Library.vcxproj -> C:\Users\Brendan\Documents\Visual Studio 2015\Projects\Assignment4-Library\Debug\Assignment4-Library.exe
+  Assignment4-Library.vcxproj -> C:\Users\Brendan\Documents\Visual Studio 2015\Projects\Assignment4-Library\Debug\Assignment4-Library.pdb (Partial PDB)

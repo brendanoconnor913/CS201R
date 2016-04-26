@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\brendan\documents\visual studio 2015\projects\assignment6\assignment6\main.cpp(64): warning C4715: 'transverse': not all control paths return a value
+  Assignment6.vcxproj -> C:\Users\Brendan\documents\visual studio 2015\Projects\Assignment6\Debug\Assignment6.exe
+  Assignment6.vcxproj -> C:\Users\Brendan\documents\visual studio 2015\Projects\Assignment6\Debug\Assignment6.pdb (Partial PDB)

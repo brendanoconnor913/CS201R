@@ -20,6 +20,8 @@
     <Text Include="output_dupes_SAMPLE.txt" />
     <Text Include="output_users_SAMPLE.txt" />
     <Text Include="users.txt" />
+    <Text Include="output_dupes.txt" />
+    <Text Include="output_users.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="User.hpp">
@@ -34,6 +36,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UserException.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

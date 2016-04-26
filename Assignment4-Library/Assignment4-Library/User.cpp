@@ -1,11 +1,12 @@
 #include "User.hpp"
+#include "UserException.hpp"
 #include <string>
 #include <iostream>
 using namespace std;
 
-
-User::User(int startId = 0, const string& firstName = "", const string&
-	lastName = "") {
+// Constructor for normal user object
+User::User(int startId, const string& firstName, const string&
+	lastName) {
 	m_id = startId;
 	m_firstName = firstName;
 	m_lastName = lastName;
@@ -13,30 +14,38 @@ User::User(int startId = 0, const string& firstName = "", const string&
 	m_borrowedCount = 0;
 	m_arraySize = 0;
 }
-User::User(const User& other) {
 
+// Constructor for copying other user objects
+User::User(const User& other) {
+	*this = other;
 }
+
 User::~User() {
 	if (m_borrowedBookList != NULL) {
 		delete[] m_borrowedBookList;
 		m_borrowedBookList = NULL;
 	}
 }
+
+// determine whether User has checkedout book
 const bool User::HasCheckedOut(const string& bookId) {
 	for (int i = 0; i < m_borrowedCount; i++) {
 		if (bookId == m_borrowedBookList[i]) {
 			return true;
 		}
-		else {
-			return false;
-		}
 	}
+	return false;
 }
+
+// How many books user has checked out
 const int User::CheckedoutCount() {
 	return m_borrowedCount;
 }
+
+// Checkout out book to User
 bool User::CheckOut(const string& bookId) {
 	bool checkedout;
+	string book = bookId;
 	checkedout = HasCheckedOut(bookId);
 	if (checkedout) {
 		return false;
@@ -47,27 +56,28 @@ bool User::CheckOut(const string& bookId) {
 	}
 
 	if (m_borrowedCount == m_arraySize) {
-		if (!resizeArray()) {
+		bool resize = resizeArray();
+		if (!resize) {
 			return false;
 		}
 	}
 
-	m_borrowedBookList[m_borrowedCount] = bookId;
+	m_borrowedBookList[m_borrowedCount] = book;
 	m_borrowedCount++;
 }
+
+// Check in book to User
 bool User::CheckIn(const string& bookId) {
 	bool checkedout;
 	checkedout = HasCheckedOut(bookId);
 
 	if (!checkedout) {
-		throw UserExceptionError("Checking in an\
-item that has not been checked out!");
+		UserException e("Checking in an item that has not been checked out!");
+		throw e;
 	}
 
-	int location;
-	for (int i; i < m_borrowedCount; i++) {
+	for (int i = 0; i < m_borrowedCount; i++) {
 		if (bookId == m_borrowedBookList[i]) {
-			location = i;
 			m_borrowedBookList[i] = m_borrowedBookList[m_borrowedCount - 1];
 			m_borrowedBookList[m_borrowedCount - 1] = "";
 			m_borrowedCount--;
@@ -103,22 +113,69 @@ void User::SetId(int id) {
 	m_id = id;
 }
 
+// Check equality of User objects
 bool const User::operator==(const User& rhs) {
-
+	User tmprhs;
+	tmprhs = rhs;
+	if (this->GetFullName() == tmprhs.GetFullName()) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
-User const User::operator+(const User& rhs) {
 
+// return result of Adding a book to a user's checkedout list
+const User User::operator+(const string& newItem) {
+	User result;
+	result = *this;
+	result.CheckOut(newItem);
+	return result;	
 }
+
+// add book to User's checked out list
 void User::operator+=(const string& rhs) {
-
+	this->CheckOut(rhs);
 }
+
+// Output information on User and their checkouts
 ostream& operator<<(ostream& out, const User& item) {
-
+	User usr(item);
+	out << "USER " << usr.m_id << endl;
+	out << "\t " << "NAME " << usr.GetFullName() << endl;
+	out << "\t " << "BOOK_COUNT " << usr.m_borrowedCount << endl;
+	for (int i = 0; i < usr.m_borrowedCount; i++) {
+		out << "\t\t " << usr.m_borrowedBookList[i] << endl;
+	}
+	out << "END" << endl;
+	out << endl;
+	return out;
 }
+
+// Input info needed for User and their checkouts
 istream& operator>>(istream& in, User& item) {
+	string ignr;
+	int bookcount;
+	string bookname;
 
+	in >> ignr >> item.m_id;
+	in >> ignr >> item.m_firstName >> item.m_lastName;
+	in >> ignr >> bookcount;
+
+	for (int i = 0; i < bookcount; i++) {
+		in >> bookname;
+		try {
+			item += bookname;
+		}
+		catch (UserException e) {
+			cerr << "Error checking the book " << bookname << ": " << e.What() << endl;
+		}
+	}
+	in >> ignr;
+	return in;
 }
 
+// Clear a User contact
 void User::Clear() {
 	m_id = 0;
 	m_firstName = "";
@@ -130,6 +187,8 @@ void User::Clear() {
 		m_borrowedBookList = NULL;
 	}
 }
+
+// Make checkouts array larger
 bool User::resizeArray() {
 	try {
 		string* tmpArray = new string[m_arraySize * 2];
@@ -138,8 +197,8 @@ bool User::resizeArray() {
 		}
 		delete[] m_borrowedBookList;
 		m_borrowedBookList = tmpArray;
-		delete[] tmpArray;
 		tmpArray = NULL;
+		m_arraySize = m_arraySize * 2;
 		return true;
 	}
 	// if you can't allocate memory correctly
@@ -149,6 +208,7 @@ bool User::resizeArray() {
 	
 }
 
+// Create an array to store book checkouts
 void User::CreateList() {
 	try {
 		m_borrowedBookList = new string[5];
@@ -161,6 +221,7 @@ void User::CreateList() {
 	}
 }
 
+// Destory the book checkout array
 void User::DestroyList() {
 	delete[] m_borrowedBookList;
 	m_borrowedBookList = NULL;

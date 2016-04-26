@@ -112,7 +112,9 @@
   <ItemGroup>
     <Text Include="checkins.txt" />
     <Text Include="checkouts.txt" />
+    <Text Include="output_dupes.txt" />
     <Text Include="output_dupes_SAMPLE.txt" />
+    <Text Include="output_users.txt" />
     <Text Include="output_users_SAMPLE.txt" />
     <Text Include="users.txt" />
   </ItemGroup>
@@ -121,6 +123,7 @@
     <ClInclude Include="UserException.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="User.cpp" />
     <ClCompile Include="UserException.cpp" />
   </ItemGroup>

@@ -28,7 +28,7 @@ public:
 	void DestroyList();
 
 	const bool operator==(const User& rhs);
-	const User operator+(const User& rhs);
+	const User operator+(const string& newItem);
 	void operator+=(const string& rhs);
 	friend ostream& operator<<(ostream& out, const User& item);
 	friend istream& operator>>(istream& in, User& item);

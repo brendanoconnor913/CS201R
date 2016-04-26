@@ -1,0 +1,40 @@
+HEADER
+size_big
+Dog Adoption Page
+
+PARAGRAPH
+Welcome to the Hundido Home for Dogs!
+
+HEADER
+size_medium
+Available Dogs
+
+LINK
+ein.html
+Ein the Corgi
+
+LINK
+floopy.html
+Floopy the Beagle
+
+LINK
+edward.html
+Edward the Jack Russel Terrier
+
+LINK
+asteroid.html
+Asteroid the Golden Retriever
+
+HEADER
+size_medium
+Newsletter
+
+PARAGRAPH
+Enter your email address to sign up for the dog newsletter!
+
+TEXTBOX
+email_address
+
+BUTTON
+submit_email
+Sign up!
