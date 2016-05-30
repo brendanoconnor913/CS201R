@@ -1,0 +1,10 @@
+﻿  Assignment7.cpp
+c:\users\brendan\documents\visual studio 2015\projects\assignment7-programmingcompetition\assignment7-programmingcompetition\assignment7.cpp(11): warning C4018: '<': signed/unsigned mismatch
+c:\users\brendan\documents\visual studio 2015\projects\assignment7-programmingcompetition\assignment7-programmingcompetition\assignment7.cpp(17): warning C4018: '<': signed/unsigned mismatch
+c:\users\brendan\documents\visual studio 2015\projects\assignment7-programmingcompetition\assignment7-programmingcompetition\assignment7.cpp(119): warning C4018: '<': signed/unsigned mismatch
+c:\users\brendan\documents\visual studio 2015\projects\assignment7-programmingcompetition\assignment7-programmingcompetition\assignment7.cpp(137): warning C4018: '<': signed/unsigned mismatch
+c:\users\brendan\documents\visual studio 2015\projects\assignment7-programmingcompetition\assignment7-programmingcompetition\assignment7.cpp(149): warning C4018: '<': signed/unsigned mismatch
+c:\users\brendan\documents\visual studio 2015\projects\assignment7-programmingcompetition\assignment7-programmingcompetition\assignment7.cpp(154): warning C4018: '<': signed/unsigned mismatch
+c:\users\brendan\documents\visual studio 2015\projects\assignment7-programmingcompetition\assignment7-programmingcompetition\assignment7.cpp(84): warning C4101: 'index': unreferenced local variable
+  Assignment7-programmingcompetition.vcxproj -> C:\Users\Brendan\documents\visual studio 2015\Projects\Assignment7-programmingcompetition\Debug\Assignment7-programmingcompetition.exe
+  Assignment7-programmingcompetition.vcxproj -> C:\Users\Brendan\documents\visual studio 2015\Projects\Assignment7-programmingcompetition\Debug\Assignment7-programmingcompetition.pdb (Partial PDB)
